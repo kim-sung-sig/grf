@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import url(./fonts.css);
+
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+a { color: inherit; text-decoration: none;}
+li {list-style: none;}
+img {max-width: 100%;}
+body { background: #fff; color: #333; font-family: 'Noto Sans KR';}
+
+
+#wrap { width: 100%;}
+/* qmenu */
+.qmenu { position: fixed; right: 5%; bottom: 5%; z-index: 999; background: #fff; border-radius: 13px; padding: 10px; box-shadow: 0px 5px 40px #b5b5b5;}
+.qmenu div { text-align: center; width: 50px;}
+.qmenu p{font-size: 12px;}
+/* //qmenu */
+
+/* header */
+header { width: 100%; border-bottom: 1px solid #d4d4d4; padding: 20px 0; position: sticky;top: 0; z-index: 1000; background: #fff;}
+header .hd-inner{max-width: 1250px; margin: 0 auto; display: flex; justify-content: space-between;}
+
+.hd-inner .hd-left {width: calc(100% / 3); display: flex; align-items: center;}
+.hd-inner .hd-center {width: calc(100% / 3);display: flex; align-items: center; justify-content: center;}
+.hd-inner .hd-center img { display: block; height: 40px;}
+.hd-inner .hd-right {width: calc(100% / 3); display: flex; align-items: center; justify-content: end;}
+
+
+.hd-left nav>ul{display: flex;}
+.hd-left nav>ul>li{display: block; position: relative; }
+.hd-left nav>ul>li>a {text-align: center; padding: 10px 10px; display: block;
+  font-size: 14px; white-space: nowrap; font-weight: 400;}
+.hd-left nav>ul>li>a:hover{ color: #dbdbdb;}
+
+.hd-left nav>ul>li>ul{ display: none; position: absolute; top:100% ;left: 0; z-index: 999; white-space: nowrap; box-shadow: 1px 3px 4px;}
+.hd-left nav>ul>li>ul>li { display: block;}
+.hd-left nav>ul>li>ul>li>a { width: 100px;display: block; padding: 10px 10px; background: #fff; font-size: 12px;
+  transition: all 0.3s linear;}
+.hd-left nav>ul>li>ul>li>a:hover { color: #fff; background: #B58D55; transition: all 0.3s linear;}
+
+.hd-right >ul {display: flex; }
+.hd-right >ul>li {padding: 0 10px; font-size: 12px;}
+.hd-right >ul>li>a:hover{ color: #fff;}
+.hd-right img{ height: 15px; vertical-align: middle; padding: 0; margin-right: 5px;}
+/* //header */
+
+/* main */
+.inner { padding: 17px 0; max-width: 1250px; margin: 0 auto; justify-content: center;}
+
+main {width: 100%; margin-top: 120px;}
+
+main .slider1{ width: 100%; position: relative;height: 580px; overflow: hidden;}
+main .slider1>ul{ display: flex; position: absolute; top:0 ;  left: 0; width: 200%;}
+
+main .slider1>ul>li {display: block; width: 100%; padding: 5px; }
+.slider1 .animated { transition: 9s ease-in-out;}
+
+main .slider1 .s_1_1 { height: 500px; background: url(../img/slide1_1.jpg) no-repeat center/cover;}
+main .slider1 .s_1_2 { height: 500px; background: url(../img/slide1_2.jpg) no-repeat center/cover;}
+main .slider1 .s_1_3 { height: 500px; background: url(../img/slide1_3.jpg) no-repeat center/cover;}
+main .slider1 .s_1_4 { height: 500px; background: url(../img/slide1_4.jpg) no-repeat center/cover;}
+main .slider1 .s_1_5 { height: 500px; background: url(../img/slide1_5.jpg) no-repeat center/cover;}
+main .slider1 .s_1_6 { height: 500px; background: url(../img/slide1_6.jpg) no-repeat center/cover;}
+main .slider1 .s_1_7 { height: 500px; background: url(../img/slide1_7.jpg) no-repeat center/cover;}
+.slbox { padding: 5px}
+.slbox p { font-weight: 800; font-size: 14px;}
+.slbox span { font-size: 12px; color: #b5b5b5;}
+
+
+
+main .main1 img{ padding: 0 10%;}
+main .main1 {margin-top: 150px;}
+main .main2 {margin-top: 150px;}
+main .main3 {margin-top: 150px;}
+main .main4 {margin-top: 150px;}
+main .main5 {margin-top: 150px;}
+main .txbox { text-align: center;}
+main .txbox p { display: block;}
+main .txbox .p1 {font-size: 46px;}
+main .txbox .p2 {font-size: 46px; font-weight: 700; margin-bottom: 20px;}
+main .txbox .p3 {font-size: 14px; font-weight: 500;}
+
+main .txbox span {display: inline-block;background: #d4d4d4; padding: 14px 26px; border-radius: 40px; font-size: 14px; margin-top: 10px; transition: all 0.3s linear;}
+main .txbox span img { height: 15px; vertical-align: middle; padding: 0; margin-right: 5px;}
+main .txbox span:hover {background: #a5a5a5; transition: all 0.3s linear;}
+
+
+main .main3 ul { display: flex; justify-content: space-around; text-align: center;}
+main .main3 ul li img{ transition: all 0.5s linear; margin-bottom: 10px;}
+main .main3 ul li img:hover { transform: scale(1.1);transition: all 0.5s linear;}
+main .main3 ul li p {font-size: 14px; font-weight: 500;}
+main .main3 ul li span { font-size: 14px; font-weight: 700;}
+
+
