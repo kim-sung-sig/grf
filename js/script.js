@@ -32,19 +32,14 @@ $(function(){
     // setInitialPos();
     setTimeout(function(){
       slides.classList.add('animated');
-    },100)
-
-    
+    },100) 
   }
-  
   function updateWidth(){
     let currentSlides = document.querySelectorAll('.slider1 ul li');
     let newSlideCount = currentSlides.length;
     let newWidth = (slideWidth + slideMargin)*newSlideCount - slideMargin + '%'
     slides.style.width = newWidth
   }
-  // slides.style.left = -100+"%"
-  
 
   function slider (){
     if (currentIdx== slideCount){
@@ -62,15 +57,8 @@ $(function(){
       }
     },100)
   }
-
   setInterval(slider,15000)
-
 })
-
-
-
-
-
 
 
 $(function(){
@@ -98,16 +86,14 @@ $(function(){
     setTimeout(function(){
       slides2.classList.add('animated');
     },100)
-
-    
   }
-  
   function updateWidth2(){
     let currentSlides2 = document.querySelectorAll('.slider2 .slide2 li');
     let newSlideCount2 = currentSlides2.length;
     let newWidth2 = (slideWidth2 + slideMargin2)*newSlideCount2 - slideMargin2 + '%'
     slides2.style.width = newWidth2
   }
+
   let j = 0
   function slider2 (){
     if (currentIdx2== slideCount2){
@@ -130,9 +116,7 @@ $(function(){
     $(".slider2-nav li").removeClass("active")
     $(".slider2-nav li").eq( j % 2 ).addClass("active")
   }
-
   setInterval(slider2,8000)
-
 })
 
 
@@ -163,8 +147,6 @@ $(function(){
     setTimeout(function(){
       slides3.classList.add('animated');
     },100)
-
-    
   }
   
   function updateWidth3(){
@@ -189,9 +171,7 @@ $(function(){
       }
     },100)
   }
-
   setInterval(slider3,8000)
-
 })
 
 
@@ -226,16 +206,14 @@ $(function(){
     setTimeout(function(){
       slides4.classList.add('animated');
     },100)
-
-    
   }
-  
   function updateWidth4(){
     let currentSlides4 = document.querySelectorAll('.slider4 .slide4 li');
     let newSlideCount4 = currentSlides4.length;
     let newWidth4 = (slideWidth4 + slideMargin4)*newSlideCount4 - slideMargin4 + '%'
     slides4.style.width = newWidth4
   }
+
   let k = 0
   function slider4 (){
     if (currentIdx4== slideCount4){
@@ -259,8 +237,12 @@ $(function(){
     $(".slider4-nav li").eq( k % 8 ).addClass("active")
   }
 
-  setInterval(slider4,8000)
-
+  $(".slider4-control #next").click(function(){
+    clearInterval(time4)
+    slider4() // 왼쪽으로만 슬라이드 가능
+    time4 = setInterval(slider4,10000) // setinterval 재설정
+  })
+  let time4 = setInterval(slider4,10000)
 })
 
 
